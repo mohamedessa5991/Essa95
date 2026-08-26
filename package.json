@@ -1,0 +1,40 @@
+{
+  "name": "cleaning-store-cashier",
+  "version": "1.0.0",
+  "description": "برنامج كاشير محل منظفات يعمل محليًا على Windows بدون إنترنت",
+  "main": "main.js",
+  "author": "محمد عبدالحفيظ",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.mohamedabdelhafiz.cleaningcashier",
+    "productName": "كاشير محل المنظفات",
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
