@@ -4,14 +4,17 @@
   "description": "برنامج كاشير محل منظفات يعمل محليًا على Windows",
   "main": "main.js",
   "author": "محمد عبدالحفيظ",
+
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win"
+    "dist": "electron-builder --win --publish never"
   },
+
   "devDependencies": {
     "electron": "22.3.27",
     "electron-builder": "24.13.3"
   },
+
   "build": {
     "appId": "com.mohamedabdelhafiz.cleaningcashier",
     "productName": "كاشير محل المنظفات",
